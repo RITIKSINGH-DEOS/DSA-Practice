@@ -21,4 +21,3 @@ public class Subsets {
 
         findSubsets(str, "", 0);
     }
-}
