@@ -2,7 +2,7 @@ package Day5;
 
 import java.util.*;
 
-public class RemoveDuplicate {
+public class DuplicateElements {
 
     public static void main(String[] args) {
 
@@ -15,18 +15,16 @@ public class RemoveDuplicate {
             arr[i] = sc.nextInt();
         }
 
-        int index = 1;
+        for (int i = 0; i < n; i++) {
 
-        for (int i = 1; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
 
-            if (arr[i] != arr[i - 1]) {
-                arr[index] = arr[i];
-                index++;
+                if (arr[i] == arr[j]) {
+                    int duplicate = arr[i];
+                    System.out.println(duplicate);
+                    return;
+                }
             }
-        }
-
-        for (int i = 0; i < index; i++) {
-            System.out.print(arr[i] + " ");
         }
     }
 }
